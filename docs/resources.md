@@ -1,6 +1,6 @@
 # Ressursfiler i Proj
 
-Kopier alle filene i [public](src/projresources/public/) til den lokale ressursmappe di. Ressursmappa vil variere avhengig av korleis Proj er installert.
+Kopier alle filene i [public](../src/projresources/public/) til den lokale ressursmappe di. Ressursmappa vil variere avhengig av korleis Proj er installert.
 
 ### Public
 
