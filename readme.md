@@ -6,4 +6,4 @@
 
 * [Proj.org](https://proj.org/)
 * [Norske ressursfiler i Proj](docs/resources.md)
-* [EPSG-koder for norske transformasjoner](docs/resources.md)
+* [EPSG-koder for norske transformasjoner](docs/epsg_codes.md)
