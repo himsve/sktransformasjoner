@@ -1,5 +1,9 @@
 # Transformasjon med EPSG-koder
 
+Transformasjonene og referanserammene i Proj følger kodene i EPSG-registeret. EPSG-registeret er administrert av IOGP (International Association of Oil & Gas Producers) og fungerer som en "de facto standard" vedrørende transformasjoner og referanserammer.
+
+Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Brukeren og systemene trenger da bare forholde seg til kodene som er gitt for referanserammene og transformasjonene.
+
 
 ## Norske ref.rammer/koordinatsystemer støtta av Proj
 
@@ -52,9 +56,12 @@
 
 ### Transformasjon med EPSG-koder
 
+Transformasjon med EPSG koder er en foretrekt meto
 
 #### Transformasjon ved standard installasjon av Proj
 
 ``cs2cs EPSG:7789 EPSG:4936 --area EPSG:1352`` 
 
+### Egendefinerte transformasjoner med Proj
 
+``cct ....``
