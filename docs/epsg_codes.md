@@ -2,7 +2,7 @@
 
 Transformasjonene og referanserammene i Proj følger kodene i EPSG-registeret. EPSG-registeret er administrert av IOGP (International Association of Oil & Gas Producers) og fungerer som en "de facto standard" vedrørende transformasjoner og referanserammer.
 
-Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Brukeren og systemene trenger da bare forholde seg til kodene som er gitt for referanserammene og transformasjonene.
+Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Brukeren og systemene trenger da bare forholde seg til kodene som er gitt for referanserammene og transformasjonene.		
 
 
 ## Norske ref.rammer/koordinatsystemer støtta av Proj
@@ -54,14 +54,10 @@ Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Bru
 | EPSG          | 25832    | EPSG          | 6172     |     500000.000 |   6600000.000 |        100.000 |        - |      500000.000 |     6600000.000 |       58.039824 |
 
 
-### Transformasjon med EPSG-koder
-
-Transformasjon med EPSG koder er en foretrekt meto
-
 #### Transformasjon ved standard installasjon av Proj
 
-``cs2cs EPSG:7789 EPSG:4936 --area EPSG:1352`` 
+``cs2cs EPSG:7789 EPSG:4936 --area EPSG:1352``
 
-### Egendefinerte transformasjoner med Proj
+I dette eksemplet initialiseres Proj til å transformere jordsentriske koordinater fra ITRF2014 til EUREF89. Opsjonen "--area" henviser til EPSG-koden på området transformasjonen skal gjelde for. EPSG:1352 som er brukt ovenfor, er koden for "Norway - onshore". Til sammenligning  voil tilsvarende transformasjon for Danmark være:
 
-``cct ....``
+``cs2cs EPSG:7789 EPSG:4936 --area EPSG:1080``		
