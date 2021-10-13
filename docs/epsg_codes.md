@@ -9,9 +9,10 @@ Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Bru
 
 | Namn ref.rammer         | Autoritet | Kode        | Merkad       |
 | ----------------------- | --------- | ----------- | ------------ |
+| ETRS89 geogr. NN2000    | EPSG      | 5942        |              |
 | ETRS89 2D geogr.        | EPSG      | 4258        |              |
-| ETRS89 geosentrisk      | EPSG      | 4936        |              |
 | ETRS89 3D geogr.        | EPSG      | 4937        |              |
+| ETRS89 geosentrisk      | EPSG      | 4936        |              |
 | ETRS89 UTM 31-36 2D     | EPSG      | 25831-25836 |              |
 | ETRS89 UTM 31-36 NN54   | EPSG      | 6171-6176   |              |
 | ETRS89 UTM 31-36 NN2000 | EPSG      | 5971-5976   |              |
