@@ -198,14 +198,14 @@ Ressursfilene vil plasseres i samme mappe som for standard Proj-installasjon.
 
 > python \
 > from pyproj import Transformer, transform \
-> transformer = Transformer.from_crs(7789, "+proj=utm +zone=32 +ellps=GRS80") # Transformerer fra ITRF2014 jordsentrisk til ITRF2014 UTM32 \
-> transformer.transform(2345766.37502,543139.33223,5886461.69393,2020.00) \
+> transform = Transformer.from_crs(7789, "+proj=utm +zone=32 +ellps=GRS80") # Transformerer fra ITRF2014 jordsentrisk til ITRF2014 UTM32 \
+> transform.transform(2345766.37502,543139.33223,5886461.69393,2020.00) \
 
 #### Transformasjon mellom ulike epoker i samme referanseramme med hastighetsmodell
 
 > python \
 > from pyproj import Transformer, transform \
-> transform=Transformer.from_pipeline("+proj=deformation +t_epoch=2000.0 +grids=eur_nkg_nkgrf17vel.tif") \
+> transform = Transformer.from_pipeline("+proj=deformation +t_epoch=2000.0 +grids=eur_nkg_nkgrf17vel.tif") # Transformerer til epoke 2000.0 \
 > transform.transform(2345766.37502, 543139.33223, 5886461.69393, 2020.00)
 
 
