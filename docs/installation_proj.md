@@ -146,7 +146,6 @@ For å fjerne PROJ_LIB:
 
 > set PROJ_LIB=
 
-
 ### Proj.db
 
 Proj.db er en relasjonsdatabase på SQLite. Databasen inneholder innehold fra EPSG-databasen samt egne data for Proj. Proj.db oppdateres og synkroniseres mot EPSG-databasen.
@@ -159,10 +158,10 @@ Hente docker image:
 > docker pull osgeo/proj
 
 Liste docker image av Proj:
-> docker images
+> docker images osgeo/proj
 
 Kjøre imaget som en kontainer:
-> docker container run -dt -p 8080:80 osgeo/proj
+> docker container run -dt -p XXXX:80 osgeo/proj
 
 Liste kjørende kontainere:
 > docker ps
@@ -175,6 +174,8 @@ Eksempel transformasjon fra ITRF2014 til EUREF89 med dockerkontainer:
 60 10 100 2021.5 \
 59.9999949042   9.9999914938 99.8591580065 2021.5
 
+Stoppe docker container
+> docker container stop <container_name>
 
 ## Debugging av Proj
 
