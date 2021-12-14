@@ -3,11 +3,25 @@ layout: page
 title: Brukerdefinerte transformasjoner
 ---
 
-I stedet for transformasjoner med EPSG-koder har Proj stor fleksibilitet på å definere egne transformasjoner og konverteringer. En transformasjon kan være et sett av flere operasjoner som er satt sammen i en "pipeline".		
+I stedet for transformasjoner med EPSG-koder har Proj stor fleksibilitet på å definere egne transformasjoner og konverteringer. Brukerdefinerte transformasjoner bygger på proj-kommandoen *cct*. En transformasjon med *cct* kan være et sett av flere operasjoner som er satt sammen i en *pipeline*.		
 
-## Basisoperasjoner i Proj
 
-#### Transformasjoner
+``cct +proj=*operation*...``		
+
+
+## Eksempler på brukerdefinerte transformasjoner
+
+I eksemplet nedenfor transformeres geografiske til jordsentriske koordinater:
+
+``cct +proj=cart +ellps=GRS80``		
+
+
+### Transformasjon med pipelines
+
+
+
+### Basisoperasjoner i Proj
+
 
 * helmert
 	* 7-parameter Helmert-transformasjon. Eventuelt 14-parameter hvis hastigheter er definert.
@@ -59,15 +73,3 @@ Proj har støtte for en mengde ulike projeksjoner. I norske områder bruker for 
 	``+proj=tmerc +lat_0=58.0 +lon_0=10.72291666666666667 +a=6377492.0176 +rf=299.15281285``	 
 * merc
 	 * "merc" er standard Merkatorprojeksjon. Et eksempel på dette er WGS84 / World Mercator
-
-## Eksempler på brukerdefinerte transformasjoner
-
-I eksemplet nedenfor transformeres geografiske til jordsentriske koordinater:
-
-``cct +proj=cart +ellps=GRS80``		
-
-
-
-
-### Transformasjon med pipelines
-

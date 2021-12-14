@@ -2,7 +2,7 @@
 
 ##
 
-* [Transformasjoner som Github pages](https://himsve.github.io/transformasjoner/)
+* [Transformasjoner som Github pages](https://kartverket.github.io/transformasjoner/)
 
 ## Linker til nyttige Proj-sider
 

@@ -5,12 +5,12 @@ title: Transformasjon med EPSG-koder
 
 Transformasjonene og referanserammene i Proj følger kodene i EPSG-registeret. EPSG-registeret er administrert av IOGP (International Association of Oil & Gas Producers) og fungerer som en "de facto standard" vedrørende transformasjoner og referanserammer.
 
-Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Brukeren og systemene trenger da bare forholde seg til kodene som er gitt for referanserammene og transformasjonene.		
+Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Brukeren og systemene trenger da bare forholde seg til kodene som er gitt for referanserammene og transformasjonene.
 
 
 ## Norske ref.rammer/koordinatsystemer støtta av Proj
 
-| Namn ref.rammer         | Autoritet | Kode        | Merkad       |
+| Namn ref.rammer         | Autoritet | Kode        | Merknad      |
 | ----------------------- | --------- | ----------- | ------------ |
 | ETRS89 geogr. NN2000    | EPSG      | 5942        |              |
 | ETRS89 2D geogr.        | EPSG      | 4258        |              |
@@ -44,7 +44,9 @@ Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Bru
 | ETRS89 UTM32 <> NGO48 III                 | EPSG          | 25831    | EPSG          | 27391    |                  |             |
 
 
-### Benchmarks fra Proj
+### Benchmarktesting av punkter med Proj
+
+I tabellen nedenfor vilkårlige punkter transformert i Proj med EPSG-koder på fra- og til-koordinatsystemet. Resultatet her kan gjerne brukes ved enhetstesting ved bruk av Proj.
 
 | Fra kode   | Til kode   | Input X/lon/E  | Input Y/lat/N | Input Z/h/H    | Epoke    | Output X/lon/E  | Output Y/lat/N  | Output Z/h/H    | Områdekode |
 | ---------- | ---------- | -------------- | ------------- | -------------- | -------- | --------------- | --------------- | ----------------| ---------- | 
@@ -58,12 +60,14 @@ Transformasjoner med EPSG-koder er en enkel og anbefalt alternativ metodikk. Bru
 | EPSG:25832 |  EPSG:5972 |     500000.000 |   6600000.000 |        100.000 |        - |      500000.000 |     6600000.000 |       58.042431 |          - |
 | EPSG:25832 |  EPSG:6172 |     500000.000 |   6600000.000 |        100.000 |        - |      500000.000 |     6600000.000 |       58.039824 |          - |
 |  EPSG:4258 |  EPSG:4230 |         10.000 |        60.000 |              - |        - | 10.001392846773 | 60.000445365016 |               - |  EPSG:1182 |
+|  EPSG:7912 |  EPSG:4937 |         10.000 |        60.000 |        100.000 |  2020.00 |  9.999991914885 | 59.999995109525 |       99.866247 |          - |
+|  EPSG:7912 |  EPSG:4937 |         10.000 |        60.000 |        100.000 |  2010.00 |  9.999994722263 | 59.999996478159 |       99.913505 |          - |
 
 
 #### Transformasjon ved standard installasjon av Proj
 
 ``cs2cs EPSG:7789 EPSG:4936 --area EPSG:1352``
 
-I dette eksemplet initialiseres Proj til å transformere jordsentriske koordinater fra ITRF2014 til EUREF89. Opsjonen "--area" henviser til EPSG-koden på området transformasjonen skal gjelde for. EPSG:1352 som er brukt ovenfor, er koden for "Norway - onshore". Til sammenligning  voil tilsvarende transformasjon for Danmark være:
+I dette eksemplet initialiseres Proj til å transformere jordsentriske koordinater fra ITRF2014 til EUREF89. Opsjonen "--area" henviser til EPSG-koden på området transformasjonen skal gjelde for. EPSG:1352 som er brukt ovenfor, er koden for "Norway - onshore". Til sammenligning vil tilsvarende transformasjon for Danmark være:
 
-``cs2cs EPSG:7789 EPSG:4936 --area EPSG:1080``		
+``cs2cs EPSG:7789 EPSG:4936 --area EPSG:1080``
