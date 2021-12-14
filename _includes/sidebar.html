@@ -1,0 +1,74 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{ site.description }}</p>
+  </div>
+
+  <img src="https://himsve.github.io/transformasjoner/src/kartverket_liggende_web.png">
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.title == 'Hjem' %} active{% endif %}" href="{{ '/' | absolute_url }}">Hjem</a>
+
+    {% comment %}
+      The code below dynamically generates a sidebar nav of pages with
+      `layout: page` in the front-matter. See readme for usage.
+    {% endcomment %}
+
+    {% assign pages_list = site.pages | sort:"url" %}
+       {% for node in pages_list %}
+          {% if node.title != null %}
+             {% if node.layout == "page" %}
+                <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | absolute_url }}">{{ node.title }}</a>
+             {% endif %}
+          {% endif %}
+       {% endfor %}
+
+     <a class="sidebar-nav-item" href="https://proj.org/">Proj.org</a>       
+     <a class="sidebar-nav-item" href="https://raw.githubusercontent.com/OSGeo/PROJ/gh-pages/proj.pdf">Brukermanual for Proj</a>       
+     <a class="sidebar-nav-item" href="https://github.com/himsve/sktransformasjoner">Github</a>
+
+       <!--
+       <a class="sidebar-nav-item" href="{{ site.github.repo }}">Githubprosjekt</a>
+       <a class="sidebar-nav-item" href="{{ site.github.repository_name }}">Githubprosjekt 3</a>
+       <a class="sidebar-nav-item" href="{{ site.baseurl }}">Githubprosjekt 4</a>
+       <a class="sidebar-nav-item" href="{{ site.repository_url }}">Githubprosjekt 5</a> 
+       -->
+  </nav>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div class="slim-sidebar" id="sidebar-menu">
+   <label class="sidebar-label">Navigation</label>
+   <ul class="nav nav-sidebar">
+      <li class="sidebar-nav-item with-sub">
+         <a href="" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Dashboard</a>
+         <ul class="nav sidebar-nav-sub">
+            <li class="nav-sub-item"><a href="menuother.html" class="nav-sub-link">Page 01</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Page 02</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Page 03</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Page 04</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Page 05</a></li>
+         </ul>
+      </li>
+      <li class="sidebar-nav-item with-sub">
+         <a href="" class="sidebar-nav-link"><i class="icon ion-ios-home-outline"></i> Menu</a>
+         <ul class="nav sidebar-nav-sub">
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Menu 01</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Menu 02</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Menu 03</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Menu 04</a></li>
+            <li class="nav-sub-item"><a href="" class="nav-sub-link">Menu 05</a></li>
+         </ul>
+      </li>
+   </ul>
+</div> -->
+
+  <div class="sidebar-item">
+    <p>
+      Kartverket &copy; {{ site.time | date: '%Y' }}. All rights reserved.
+    </p>
+  </div>
+</div>

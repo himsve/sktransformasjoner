@@ -1,0 +1,15 @@
+title: Transformasjoner i Kartverket
+
+# About/contact
+author:
+  name:              Sveinung Himle
+  url:               https://kartverket.no
+  email:             sveinung.himle@kartverket.no
+
+# Gems
+plugins:
+  - jekyll-paginate
+
+# theme: jekyll-theme-modernist
+
+include: ['_pages']
