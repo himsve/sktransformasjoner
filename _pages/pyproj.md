@@ -24,7 +24,7 @@ Kommando for å vise installert versjon:
 
 Laste ned ressursfiler for norske områder med pyproj:
 
-> pyproj sync 2,57,32,82
+> pyproj sync --bbox 2,57,32,82
 
 Ressursfilene vil plasseres i samme mappe som for standard Proj-installasjon.
 
